@@ -2128,7 +2128,7 @@
         "gridColor": 10401023,
         "gridAlpha": 0.8,
         "snap": false,
-        "zoomFactor": 0.3673257545058839,
+        "zoomFactor": 0.47893418845352725,
         "windowMask": false
       },
       "objectsGroups": [],
@@ -14647,21 +14647,6 @@
         },
         {
           "angle": 0,
-          "customSize": false,
-          "height": 0,
-          "layer": "",
-          "name": "Batteries",
-          "persistentUuid": "2c720699-f0f6-43da-9aaa-5df13506b182",
-          "width": 0,
-          "x": 72,
-          "y": 125,
-          "zOrder": 8,
-          "numberProperties": [],
-          "stringProperties": [],
-          "initialVariables": []
-        },
-        {
-          "angle": 0,
           "customSize": true,
           "depth": 0,
           "height": 59,
@@ -18311,10 +18296,10 @@
           "effects": [],
           "behaviors": [
             {
-              "acceleration": 200,
-              "maxSpeed": 100,
               "name": "Pathfinding",
               "type": "PathfindingBehavior::PathfindingBehavior",
+              "acceleration": 200,
+              "maxSpeed": 100,
               "allowDiagonals": true,
               "angleOffset": 0,
               "angularMaxSpeed": 180,
@@ -21662,7 +21647,19 @@
                   "events": [
                     {
                       "type": "BuiltinCommonInstructions::Standard",
-                      "conditions": [],
+                      "conditions": [
+                        {
+                          "type": {
+                            "value": "Distance"
+                          },
+                          "parameters": [
+                            "Knight",
+                            "Robot",
+                            "350",
+                            ""
+                          ]
+                        }
+                      ],
                       "actions": [
                         {
                           "type": {
@@ -21882,11 +21879,60 @@
       "stopSoundsOnStartup": true,
       "title": "",
       "v": 209,
-      "uiSettings": {},
+      "uiSettings": {
+        "grid": false,
+        "gridType": "rectangular",
+        "gridWidth": 32,
+        "gridHeight": 32,
+        "gridOffsetX": 0,
+        "gridOffsetY": 0,
+        "gridColor": 10401023,
+        "gridAlpha": 0.8,
+        "snap": false,
+        "zoomFactor": 0.546875,
+        "windowMask": false
+      },
       "objectsGroups": [],
       "variables": [],
-      "instances": [],
-      "objects": [],
+      "instances": [
+        {
+          "angle": 0,
+          "customSize": true,
+          "depth": 0,
+          "height": 118,
+          "layer": "",
+          "name": "NewBBText",
+          "persistentUuid": "cffedfb9-ca20-4fc8-b898-4eeef2ed676d",
+          "width": 879,
+          "x": 196,
+          "y": 305,
+          "zOrder": 1,
+          "numberProperties": [],
+          "stringProperties": [],
+          "initialVariables": []
+        }
+      ],
+      "objects": [
+        {
+          "assetStoreId": "",
+          "name": "NewBBText",
+          "tags": "",
+          "type": "BBText::BBText",
+          "variables": [],
+          "effects": [],
+          "behaviors": [],
+          "content": {
+            "text": "[b]Level 2 Complete![/b]",
+            "opacity": 255,
+            "fontSize": 100,
+            "visible": true,
+            "color": "0;0;0",
+            "fontFamily": "Arial",
+            "align": "left",
+            "wordWrap": true
+          }
+        }
+      ],
       "events": [],
       "layers": [
         {
